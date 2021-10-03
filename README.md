@@ -1,54 +1,20 @@
-# flat's guix channel
+# tekakutli's guix channel
 
 This is a personal collection of [GNU Guix][guix] package definitions.  Refer
 to the manual for more information on [Guix Channels][guix-channel].
+Originally forked from [flatwhatson](https://github.com/flatwhatson/guix-channel)
 
 ## Packages
 
-### emacs-native-comp
+### krita-rakurri-brushes
 
-Emacs built with support for native compilation of Elisp.
-
-This package once tracked the `feature/native-comp` branch on savannah, but
-now tracks `master` as the feature was merged for inclusion in Emacs 28.
-
-See [GccEmacs][gccemacs] for more information.
-
-### emacs-pgtk-native-comp
-
-Emacs built with support for native compilation of Elisp and a new "pure" GTK3
-rendering engine, bringing support for Wayland and improved performance on X.
-
-This package tracks an unofficial [pgtk-nativecomp][flatwhatson-pgtk] branch,
-which was once a merge of the `feature/pgtk` and `feature/native-comp`
-branches on savannah.  Since native compilation was merged for inclusion in
-Emacs 28, this branch tracks `feature/pgtk` with slightly more frequent merges
-from `master`.
-
-See [masm11's branch][masm11-pgtk] for more information on PGTK.
-
-### libgccjit-10
-
-An updated `libgccjit` package based on `gcc-10`.  The `libgccjit` package in
-Guix is based on `gcc-9`, which is missing some changes that are important for
-`emacs-native-comp` performance.
+Very cool brushes developed by [Rakurri](https://github.com/Rakurri/rakurri-brush-set-for-krita)
 
 ## Usage
 
-### via load-path
-
-The simplest way to use this channel is to temporarily add it to Guix's
-load-path:
-
-``` shell
-git clone https://github.com/flatwhatson/guix-channel.git
-guix install -L ./guix-channel emacs-native-comp
-```
-
 ### via channels.scm
 
-A more permanent solution is to configure Guix to use this channel as an
-*additional channel*.  This will extend your package collection with
+This will extend your package collection with
 definitions from this channel.  Updates will be received (and authenticated)
 with `guix pull`.
 
@@ -58,7 +24,7 @@ To use the channel, add it to your configuration in
 ``` scheme
 (cons* (channel
         (name 'flat)
-        (url "https://github.com/flatwhatson/guix-channel.git")
+        (url "https://github.com/tekakutli/guix-channel.git")
         (introduction
          (make-channel-introduction
           "33f86a4b48205c0dc19d7c036c85393f0766f806"
@@ -71,8 +37,8 @@ With the channel configured, it can be used as follows:
 
 ``` shell
 guix pull
-guix search emacs-native-comp
-guix install emacs-native-comp
+guix search krita-rakurri-brushes
+guix install krita-rakurri-brushes
 ```
 
 ## License
@@ -93,6 +59,3 @@ See [COPYING](COPYING) for details.
 
 [guix]: https://guix.gnu.org/
 [guix-channel]: https://guix.gnu.org/manual/en/html_node/Channels.html
-[gccemacs]: https://www.emacswiki.org/emacs/GccEmacs
-[masm11-pgtk]: https://github.com/masm11/emacs/tree/pgtk
-[flatwhatson-pgtk]: https://github.com/flatwhatson/emacs/tree/pgtk-nativecomp
