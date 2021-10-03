@@ -1,8 +1,8 @@
 # tekakutli's guix channel
 
 This is a personal collection of [GNU Guix][guix] package definitions.  Refer
-to the manual for more information on [Guix Channels][guix-channel].
-Originally forked from [flatwhatson](https://github.com/flatwhatson/guix-channel)
+to the manual for more information on [Guix Channels][guix-channel].  
+Originally forked from [flatwhatson](https://github.com/flatwhatson/guix-channel).
 
 ## Packages
 
