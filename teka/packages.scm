@@ -1,5 +1,4 @@
 ;;; GNU Guix --- Functional package management for GNU
-;;; Copyright © 2020 Andrew Whatson <whatson@gmail.com>
 ;;;
 ;;; This file is NOT part of GNU Guix.
 ;;;
@@ -16,7 +15,7 @@
 ;;; You should have received a copy of the GNU General Public License
 ;;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(define-module (flat packages)
+(define-module (teka packages)
   #:use-module ((gnu packages) #:prefix gnu:)
   #:use-module (guix diagnostics)
   #:use-module (guix i18n)
@@ -38,11 +37,11 @@ FILE-NAME found in %PATCH-PATH."
 
 (define %channel-root
   (find (lambda (path)
-          (file-exists? (string-append path "/flat/packages.scm")))
+          (file-exists? (string-append path "/teka/packages.scm")))
         %load-path))
 
 (define %patch-path
   (make-parameter
    (cons
-    (string-append %channel-root "/flat/packages/patches")
+    (string-append %channel-root "/teka/packages/patches")
     (gnu:%patch-path))))
