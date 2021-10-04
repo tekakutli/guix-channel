@@ -5,6 +5,7 @@
   #:use-module (guix utils)
   #:use-module (guix build-system gnu)
   #:use-module (gnu packages)
+  #:use-module (guix licenses)
   #:use-module (srfi srfi-1))
 
 (define-public rakurri-brush-set-for-krita
@@ -12,7 +13,7 @@
    (name "rakurri-brush-set-for-krita")
    (version "1.1")
    (source (origin
-            (method url-fetch)
+            (method git-fetch)
             (uri (string-append "mirror://gnu/hello/hello-" version
                                 ".tar.gz"))
             (sha256

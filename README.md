@@ -23,13 +23,8 @@ To use the channel, add it to your configuration in
 
 ``` scheme
 (cons* (channel
-        (name 'flat)
+        (name 'tekakutli)
         (url "https://github.com/tekakutli/guix-channel.git")
-        (introduction
-         (make-channel-introduction
-          "33f86a4b48205c0dc19d7c036c85393f0766f806"
-          (openpgp-fingerprint
-           "3437 D81E FBE3 3C6B DE0B  145F FCD2 A718 92A8 6C6B"))))
        %default-channels)
 ```
 
