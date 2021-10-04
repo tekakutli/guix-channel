@@ -29,7 +29,7 @@ To use the channel, add it to your configuration in
          (make-channel-introduction
           "33f86a4b48205c0dc19d7c036c85393f0766f806"
           (openpgp-fingerprint
-           "736A C00E 1254 378B A982  7AF6 9DBE 8265 81B6 4490"))))
+           "3437 D81E FBE3 3C6B DE0B  145F FCD2 A718 92A8 6C6B"))))
        %default-channels)
 ```
 
