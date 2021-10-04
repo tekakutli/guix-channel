@@ -15,8 +15,8 @@
    (version "1.1")
    (source (origin
             (method git-fetch)
-            (git-reference (url "https://github.com/Rakurri/rakurri-brush-set-for-krita")
-            (commit "a4d915686ad8d7fd565c4d095329a562a6655662"))
+            (uri (git-reference (url "https://github.com/Rakurri/rakurri-brush-set-for-krita")
+            (commit "a4d915686ad8d7fd565c4d095329a562a6655662")))
             (sha256
              (base32
               "1csay05vv477012hz9z2y1662axgmhbbw8kl7i9323bm7mfhc2m4"))))
