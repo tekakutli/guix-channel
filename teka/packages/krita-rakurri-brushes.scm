@@ -1,7 +1,11 @@
-(use-modules (guix packages)
-             (guix download)
-             (guix build-system gnu)
-             (guix licenses))
+(define-module (teka packages)
+  #:use-module (guix packages)
+  #:use-module (guix download)
+  #:use-module (guix memoization)
+  #:use-module (guix utils)
+  #:use-module (guix build-system gnu)
+  #:use-module (gnu packages)
+  #:use-module (srfi srfi-1))
 
 (package
   (name "rakurri-brush-set-for-krita")
